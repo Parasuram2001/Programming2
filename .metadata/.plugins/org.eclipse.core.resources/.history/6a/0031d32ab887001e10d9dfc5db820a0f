@@ -1,0 +1,30 @@
+
+public class replace {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str = "hi how how are you you hi hi how";
+		String[] str1 = str.split(" ");
+		for(int i=0;i<str1.length;i++)
+		{
+			boolean flag = true;
+			try {
+				if(str1[i]==str1[i+1])
+				{
+					flag = false;
+					break;
+				}
+			}
+			catch(ArrayIndexOutOfBoundsException e){
+				System.out.println("catched");
+			}
+			if(flag)
+			{
+				System.out.println(str1[i]);
+			}
+				
+		}
+
+	}
+
+}
